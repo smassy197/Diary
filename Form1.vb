@@ -187,6 +187,7 @@ Public Class Form1
         End Try
     End Function
 
+
     Private Function ReadUserNameFromConfig(configFilePath As String) As String
         Try
             ' Leggi il contenuto del file di configurazione
@@ -846,8 +847,8 @@ Public Class Form1
     End Function
 
     Private Sub btnLoginForm_Click(sender As Object, e As EventArgs) Handles btnLoginForm.Click
-        Dim loginForm As New LoginForm()
-        If loginForm.ShowDialog() = DialogResult.OK Then
+        Dim loginForm As New LoginForm
+        If loginForm.ShowDialog = DialogResult.OK Then
             ' Verifica che il percorso del file sia valido
             If Not String.IsNullOrWhiteSpace(loginForm.FirebaseConfigFilePath) Then
                 SaveFirebaseConfiguration(loginForm.FirebaseConfigFilePath)
@@ -1323,6 +1324,10 @@ Public Class Form1
         ' Eventualmente richiama una funzione per ripristinare lo stato iniziale
         AggiornaCalendario()
         Await CaricaVociDaFirestore(projectId)
+    End Sub
+
+    Private Sub btnRelease_Click(sender As Object, e As EventArgs) Handles btnRelease.Click
+        SplashScreen1.ShowDialog()
     End Sub
 
 

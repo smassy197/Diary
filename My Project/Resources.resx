@@ -121,17 +121,20 @@
   <data name="disgustato" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\disgustato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grato" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="felice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\felice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="curioso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\curioso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="geloso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\geloso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="euforico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\euforico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perplesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perplesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imbarazzato" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imbarazzato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,11 +148,11 @@
   <data name="stupito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stupito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrabbiato" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrabbiato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="sorpreso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sorpreso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soddisfatto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soddisfatto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="invidioso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invidioso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,6 +169,9 @@
   <data name="ansioso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ansioso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="amministrazione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\amministrazione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="contrariato" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contrariato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,19 +184,19 @@
   <data name="apatico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apatico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="perplesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\perplesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="grato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nostalgico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nostalgico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soddisfatto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\soddisfatto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrabbiato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrabbiato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="confuso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\confuso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="geloso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\geloso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="diary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\net8.0-windows10.0.26100.0\diary.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

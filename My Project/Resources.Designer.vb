@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property amministrazione() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("amministrazione", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property ansioso() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("ansioso", resourceCulture)
@@ -126,6 +136,16 @@ Namespace My.Resources
         Friend ReadOnly Property deluso() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("deluso", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property diary() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("diary", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

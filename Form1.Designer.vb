@@ -47,6 +47,7 @@ Partial Class Form1
         lblPCName = New Label()
         txtFlag = New TextBox()
         Label1 = New Label()
+        btnRelease = New Krypton.Toolkit.KryptonButton()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -69,7 +70,7 @@ Partial Class Form1
         ' 
         ' btnReset
         ' 
-        btnReset.Location = New Point(1180, 280)
+        btnReset.Location = New Point(1180, 285)
         btnReset.Name = "btnReset"
         btnReset.Size = New Size(117, 47)
         btnReset.TabIndex = 8
@@ -78,7 +79,7 @@ Partial Class Form1
         ' 
         ' btnCheckSpelling
         ' 
-        btnCheckSpelling.Location = New Point(1180, 227)
+        btnCheckSpelling.Location = New Point(1179, 231)
         btnCheckSpelling.Name = "btnCheckSpelling"
         btnCheckSpelling.Size = New Size(117, 47)
         btnCheckSpelling.TabIndex = 9
@@ -88,7 +89,7 @@ Partial Class Form1
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(1188, 12)
+        PictureBox1.Location = New Point(1184, 4)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(109, 113)
         PictureBox1.TabIndex = 10
@@ -116,18 +117,18 @@ Partial Class Form1
         ' 
         ' btnStampa
         ' 
-        btnStampa.Location = New Point(1139, 177)
+        btnStampa.Location = New Point(1180, 177)
         btnStampa.Name = "btnStampa"
-        btnStampa.Size = New Size(158, 48)
+        btnStampa.Size = New Size(117, 48)
         btnStampa.TabIndex = 13
         btnStampa.Text = "Stampa"
         btnStampa.UseVisualStyleBackColor = True
         ' 
         ' btnLoginForm
         ' 
-        btnLoginForm.Location = New Point(1180, 499)
+        btnLoginForm.Location = New Point(1179, 123)
         btnLoginForm.Name = "btnLoginForm"
-        btnLoginForm.Size = New Size(117, 29)
+        btnLoginForm.Size = New Size(117, 48)
         btnLoginForm.TabIndex = 21
         btnLoginForm.Text = "Login"
         btnLoginForm.UseVisualStyleBackColor = True
@@ -144,18 +145,18 @@ Partial Class Form1
         ' 
         ' btnAggiungiVoceFirestore
         ' 
-        btnAggiungiVoceFirestore.Location = New Point(1180, 333)
+        btnAggiungiVoceFirestore.Location = New Point(1180, 338)
         btnAggiungiVoceFirestore.Name = "btnAggiungiVoceFirestore"
-        btnAggiungiVoceFirestore.Size = New Size(117, 42)
+        btnAggiungiVoceFirestore.Size = New Size(117, 88)
         btnAggiungiVoceFirestore.TabIndex = 23
         btnAggiungiVoceFirestore.Text = "Salva"
         btnAggiungiVoceFirestore.UseVisualStyleBackColor = True
         ' 
         ' btnEliminaVoceFirestore
         ' 
-        btnEliminaVoceFirestore.Location = New Point(1180, 381)
+        btnEliminaVoceFirestore.Location = New Point(1180, 432)
         btnEliminaVoceFirestore.Name = "btnEliminaVoceFirestore"
-        btnEliminaVoceFirestore.Size = New Size(117, 39)
+        btnEliminaVoceFirestore.Size = New Size(116, 46)
         btnEliminaVoceFirestore.TabIndex = 24
         btnEliminaVoceFirestore.Text = "Elimina"
         btnEliminaVoceFirestore.UseVisualStyleBackColor = True
@@ -171,9 +172,9 @@ Partial Class Form1
         ' 
         ' btnMostraForm4
         ' 
-        btnMostraForm4.Location = New Point(1184, 448)
+        btnMostraForm4.Location = New Point(1180, 496)
         btnMostraForm4.Name = "btnMostraForm4"
-        btnMostraForm4.Size = New Size(112, 31)
+        btnMostraForm4.Size = New Size(117, 31)
         btnMostraForm4.TabIndex = 26
         btnMostraForm4.Values.DropDownArrowColor = Color.Empty
         btnMostraForm4.Values.Text = "Manutenzione"
@@ -181,7 +182,7 @@ Partial Class Form1
         ' lblStatus
         ' 
         lblStatus.AutoSize = True
-        lblStatus.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblStatus.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblStatus.Location = New Point(601, 249)
         lblStatus.Name = "lblStatus"
         lblStatus.Size = New Size(74, 28)
@@ -204,7 +205,7 @@ Partial Class Form1
         ' 
         ' cmbKeyword
         ' 
-        cmbKeyword.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbKeyword.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbKeyword.FormattingEnabled = True
         cmbKeyword.Location = New Point(293, 21)
         cmbKeyword.Name = "cmbKeyword"
@@ -244,12 +245,22 @@ Partial Class Form1
         Label1.TabIndex = 34
         Label1.Text = "Nome dispositivo:"
         ' 
+        ' btnRelease
+        ' 
+        btnRelease.Location = New Point(1180, 533)
+        btnRelease.Name = "btnRelease"
+        btnRelease.Size = New Size(117, 31)
+        btnRelease.TabIndex = 35
+        btnRelease.Values.DropDownArrowColor = Color.Empty
+        btnRelease.Values.Text = "Release"
+        ' 
         ' Form1
         ' 
         AcceptButton = btnDiminuisci
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1309, 634)
+        Controls.Add(btnRelease)
         Controls.Add(Label1)
         Controls.Add(txtFlag)
         Controls.Add(lblPCName)
@@ -303,5 +314,6 @@ Partial Class Form1
     Friend WithEvents lblPCName As Label
     Friend WithEvents txtFlag As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnRelease As Krypton.Toolkit.KryptonButton
 
 End Class
