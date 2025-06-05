@@ -18,9 +18,17 @@ Imports Google.Cloud.Firestore.V1.StructuredQuery.Types
 Imports System.Reflection.Metadata
 Imports Krypton.Toolkit
 Imports Newtonsoft.Json
+' Inserisci questi import all'inizio del file
+Imports System.Diagnostics
+Imports System.Net.Http
 
 
 Public Class Form1
+    ' Aggiungi queste costanti in Form1
+    Private Const VersionUrl As String = "https://raw.githubusercontent.com/smassy197/Diary/master/version.txt"
+    Private Const ExeUrl As String = "https://github.com/smassy197/Diary/releases/latest/download/mysetup_Diary.exe"
+    Private Const LocalExePath As String = "Diary.exe" ' Percorso dell'eseguibile locale
+
     Private databasePath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Diary", "diary.db")
     Private connectionString As String = $"Data Source={databasePath};Version=3;"
     Private configFilePath As String = Path.Combine(Path.GetDirectoryName(databasePath), "userconfig.txt")
@@ -146,7 +154,6 @@ Public Class Form1
         End If
     End Function
 
-
     Private Function CheckPassword(configFilePath As String) As Boolean
         Try
             ' Leggi il contenuto del file di configurazione
@@ -186,7 +193,6 @@ Public Class Form1
             Return False
         End Try
     End Function
-
 
     Private Function ReadUserNameFromConfig(configFilePath As String) As String
         Try
@@ -273,6 +279,7 @@ Public Class Form1
         ' Al caricamento del form, popola la ListBox con le voci del diario
 
         AggiornaCalendario()
+        CheckForUpdates()
 
     End Sub
 
@@ -303,6 +310,62 @@ Public Class Form1
         connectionCheckTimer.Stop()
     End Sub
 
+    '___________________________________________ update version e download exe
+    ' Funzione per ottenere la versione locale
+    Private Function GetLocalVersion() As String
+        Return Application.ProductVersion
+    End Function
+
+    ' Funzione per ottenere la versione remota da GitHub
+    Private Async Function GetRemoteVersion() As Task(Of String)
+        Using client As New HttpClient()
+            Return Await client.GetStringAsync(VersionUrl)
+        End Using
+    End Function
+
+    ' Funzione per confrontare le versioni (ritorna True se la remota è più recente)
+    Private Function IsNewVersionAvailable(localVersion As String, remoteVersion As String) As Boolean
+        Try
+            Dim vLocal = New Version(localVersion.Trim())
+            Dim vRemote = New Version(remoteVersion.Trim())
+            Return vRemote > vLocal
+        Catch
+            Return False
+        End Try
+    End Function
+
+    ' Funzione per scaricare il nuovo exe
+    Private Async Function DownloadNewExe() As Task
+        Dim tempPath = Path.Combine(Path.GetTempPath(), "Diary_update.exe")
+        Using client As New HttpClient()
+            Using response = Await client.GetAsync(ExeUrl, HttpCompletionOption.ResponseHeadersRead)
+                response.EnsureSuccessStatusCode()
+                Using fs = New FileStream(tempPath, FileMode.Create, FileAccess.Write, FileShare.None)
+                    Await response.Content.CopyToAsync(fs)
+                End Using
+            End Using
+        End Using
+        Process.Start(tempPath)
+        Application.Exit()
+    End Function
+
+    ' Chiamala all'avvio o con un pulsante
+    Private Async Sub CheckForUpdates()
+        Try
+            Dim localVersion = GetLocalVersion()
+            Dim remoteVersion = Await GetRemoteVersion()
+            If IsNewVersionAvailable(localVersion, remoteVersion) Then
+                If MessageBox.Show($"È disponibile una nuova versione ({remoteVersion.Trim()}). Vuoi aggiornare ora?", "Aggiornamento disponibile", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
+                    Await DownloadNewExe()
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Errore durante la verifica aggiornamenti: " & ex.Message)
+        End Try
+    End Sub
+
+
+    '-------------------------------------------------------------------------
 
 
     Private Async Sub btnAggiungiVoceFirestore_Click(sender As Object, e As EventArgs) Handles btnAggiungiVoceFirestore.Click
